@@ -55,7 +55,7 @@ body::before{
 .screen.active{display:flex;}
 
 /* ============ HUD / TOP BAR ============ */
-.hud{width:100%;max-width:600px;display:flex;align-items:center;gap:8px;padding:4px;position:relative;z-index:2;}
+.hud{width:100%;max-width:720px;display:flex;align-items:center;gap:8px;padding:4px;position:relative;z-index:2;}
 .hud .brand{display:flex;flex-direction:column;gap:2px;}
 .hud .brand .nm{font-weight:900;font-size:16px;letter-spacing:2px;background:linear-gradient(90deg,var(--cyan),var(--purple2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;}
 .hud .brand .rank{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;}
@@ -68,12 +68,12 @@ body::before{
 .res-pill b{color:var(--gold);font-family:monospace;font-size:13px;}
 
 /* XP bar */
-.xp-bar{width:100%;max-width:600px;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;position:relative;z-index:2;margin-bottom:2px;}
+.xp-bar{width:100%;max-width:720px;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;position:relative;z-index:2;margin-bottom:2px;}
 .xp-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--purple2));box-shadow:0 0 8px var(--cyan);transition:width .4s;}
 
 /* ============ STATION LOBBY ============ */
-.station-wrap{flex:1;width:100%;max-width:600px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;min-height:0;}
-.station{width:min(92vw,420px);height:min(92vw,420px);position:relative;filter:drop-shadow(0 0 30px rgba(77,208,255,0.25));}
+.station-wrap{flex:1;width:100%;max-width:720px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;min-height:0;}
+.station{width:min(92vw,440px);height:min(92vw,440px);position:relative;filter:drop-shadow(0 0 30px rgba(77,208,255,0.25));}
 .station .ring-out{animation:spinSlow 60s linear infinite;transform-origin:50% 50%;}
 .station .ring-in{animation:spinSlowRev 40s linear infinite;transform-origin:50% 50%;}
 .station .core-pulse{animation:corePulse 3s ease-in-out infinite;transform-origin:50% 50%;}
@@ -88,7 +88,7 @@ body::before{
 .core-sub{font-size:9px;fill:var(--muted);text-anchor:middle;letter-spacing:1px;pointer-events:none;}
 
 /* ============ LOBBY ACTIONS ============ */
-.lobby-actions{width:100%;max-width:600px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;padding:6px 0 4px;position:relative;z-index:2;}
+.lobby-actions{width:100%;max-width:720px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;padding:6px 0 4px;position:relative;z-index:2;}
 .act-btn{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   padding:12px 6px;border-radius:14px;background:linear-gradient(180deg,rgba(40,25,90,0.75),rgba(15,10,45,0.75));
   border:1px solid var(--border);color:var(--text);cursor:pointer;font-size:10px;font-weight:700;
@@ -100,7 +100,7 @@ body::before{
 .act-btn.gold svg{color:var(--gold);}
 .act-btn .dot{position:absolute;top:6px;right:8px;width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);}
 
-.battle-btn{width:100%;max-width:600px;padding:16px;margin-top:4px;border-radius:18px;
+.battle-btn{width:100%;max-width:720px;padding:16px;margin-top:4px;border-radius:18px;
   background:linear-gradient(180deg,#4dd0ff,#1e6fbf);border:1px solid var(--cyan2);
   color:#031530;font-weight:900;font-size:18px;letter-spacing:3px;text-transform:uppercase;
   box-shadow:0 0 28px rgba(77,208,255,0.5),inset 0 1px 0 rgba(255,255,255,0.5);
@@ -110,15 +110,16 @@ body::before{
 .battle-btn:active{transform:scale(0.98);filter:brightness(1.15);}
 
 /* ============ SETUP SCREEN ============ */
-.setup-top{width:100%;max-width:600px;display:flex;align-items:center;gap:10px;padding:6px 0;}
+.setup-top{width:100%;max-width:720px;display:flex;align-items:center;gap:10px;padding:6px 0;}
 .setup-top .ttl{font-weight:800;letter-spacing:2px;font-size:14px;color:var(--cyan);text-transform:uppercase;}
 .btn-back{width:38px;height:38px;border-radius:10px;background:rgba(40,25,90,0.7);border:1px solid var(--border);
   color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .btn-back svg{width:18px;height:18px;}
 
 .board-shell{background:rgba(10,6,30,0.5);border:1px solid var(--border);border-radius:18px;padding:12px;position:relative;z-index:2;
-  backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(0,0,0,0.5);}
-.ship-tray{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+  backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(0,0,0,0.5);
+  width:100%;max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+.ship-tray{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px;width:100%;}
 .ship-chip{padding:6px 8px;border-radius:10px;background:rgba(40,25,90,0.6);border:1px solid var(--border);
   cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;}
 .ship-chip.sel{border-color:var(--gold);background:rgba(255,204,68,0.15);box-shadow:0 0 12px rgba(255,204,68,0.5);}
@@ -133,7 +134,7 @@ body::before{
 .tool-btn.primary{background:linear-gradient(180deg,#4dd0ff,#1e6fbf);border-color:var(--cyan2);color:#031530;font-weight:900;}
 
 /* ============ GAME SCREEN ============ */
-.game-top{width:100%;max-width:600px;display:flex;align-items:center;gap:8px;padding:6px 2px;position:relative;z-index:2;}
+.game-top{width:100%;max-width:720px;display:flex;align-items:center;gap:8px;padding:6px 2px;position:relative;z-index:2;}
 .turn-badge{flex:1;padding:8px 12px;border-radius:12px;background:rgba(40,25,90,0.7);border:1px solid var(--border);
   text-align:center;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;
   display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;}
@@ -141,7 +142,7 @@ body::before{
 .turn-badge.enemy{border-color:var(--red);box-shadow:0 0 16px rgba(255,85,102,0.35);color:var(--red);}
 .turn-badge svg{width:16px;height:16px;}
 
-.boards{flex:1;width:100%;max-width:600px;display:flex;gap:10px;justify-content:center;align-items:flex-start;flex-wrap:wrap;padding:6px 0;position:relative;z-index:2;}
+.boards{flex:1;width:100%;max-width:720px;display:flex;gap:10px;justify-content:center;align-items:flex-start;flex-wrap:wrap;padding:6px 0;position:relative;z-index:2;min-height:0;}
 .board-col{display:flex;flex-direction:column;align-items:center;gap:5px;position:relative;}
 .board-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;}
 .board-lbl.mine{color:var(--cyan);}
@@ -151,7 +152,7 @@ body::before{
 @keyframes shake{0%,100%{transform:translate(0,0);}25%{transform:translate(-4px,2px);}50%{transform:translate(4px,-2px);}75%{transform:translate(-2px,-2px);}}
 
 /* Abilities bar */
-.abilities-bar{width:100%;max-width:600px;display:flex;justify-content:center;gap:8px;padding:6px;position:relative;z-index:2;}
+.abilities-bar{width:100%;max-width:720px;display:flex;justify-content:center;gap:8px;padding:6px;position:relative;z-index:2;}
 .ab-btn{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   padding:8px 10px;min-width:70px;border-radius:12px;background:linear-gradient(180deg,rgba(40,25,90,0.8),rgba(15,10,45,0.8));
   border:1px solid var(--border);color:var(--text);cursor:pointer;font-size:10px;font-weight:700;
@@ -244,16 +245,6 @@ body::before{
 .tut-box .msg{font-size:14px;line-height:1.45;margin-bottom:10px;}
 .tut-box .row{display:flex;gap:8px;}
 .tut-box .btn{flex:1;margin:0;}
-
-/* Ad loading */
-#ov-adload{z-index:200;}
-.spinner{width:60px;height:60px;margin:20px auto;position:relative;}
-.spinner::before,.spinner::after{content:'';position:absolute;inset:0;border-radius:50%;border:3px solid transparent;}
-.spinner::before{border-top-color:var(--cyan);border-right-color:var(--cyan);animation:sp 0.9s linear infinite;}
-.spinner::after{inset:10px;border-bottom-color:var(--purple2);border-left-color:var(--purple2);animation:sp 0.7s linear infinite reverse;}
-@keyframes sp{to{transform:rotate(360deg);}}
-.pulse{animation:adPulse 1.4s ease-in-out infinite;}
-@keyframes adPulse{0%,100%{opacity:0.55;}50%{opacity:1;}}
 
 /* Season */
 .season-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:12px;color:var(--muted);}
@@ -544,13 +535,6 @@ canvas{display:block;border-radius:12px;background:#050a1e;box-shadow:0 4px 20px
   <p class="muted" id="result-season"></p>
   <button class="btn primary" id="btn-double"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg><span data-i18n="double">Удвоить за рекламу</span></button>
   <button class="btn gold" id="btn-collect" data-i18n="collect">Забрать</button>
-</div></div>
-
-<!-- AD LOADING -->
-<div class="ov opaque" id="ov-adload"><div class="modal" style="text-align:center;">
-  <h2 style="justify-content:center;">⚡ <span data-i18n="loadingBattle">Загрузка боя…</span></h2>
-  <div class="spinner"></div>
-  <p class="muted pulse" data-i18n="loadingHint">Пожалуйста, подождите. Сейчас начнётся реклама.</p>
 </div></div>
 
 <!-- TUTORIAL ASK -->
@@ -934,15 +918,17 @@ function fxTick(){
 function shake(){const w=$('#board-wrap');w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');setTimeout(()=>w.classList.remove('shake'),400);}
 
 /* ============ CANVAS RENDER ============ */
-function fitCanvas(cv,cols,rows){
-  const maxW=Math.min(320,window.innerWidth-40);
-  const maxH=Math.min(320,window.innerHeight*0.34);
-  const cell=Math.floor(Math.min(maxW/cols,maxH/rows));
-  const w=cell*cols,h=cell*rows,dpr=window.devicePixelRatio||1;
-  cv.style.width=w+'px';cv.style.height=h+'px';
-  cv.width=w*dpr;cv.height=h*dpr;
-  const ctx=cv.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);
-  return{cell,w,h,ctx};
+function fitCanvas(cv,cols,rows,maxPx){
+  if(!maxPx) maxPx = 480;
+  const cell = Math.max(1, Math.floor(maxPx / Math.max(cols, rows)));
+  const w = cell * cols, h = cell * rows, dpr = window.devicePixelRatio || 1;
+  cv.style.width = w + 'px';
+  cv.style.height = h + 'px';
+  cv.width = w * dpr;
+  cv.height = h * dpr;
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { cell, w, h, ctx };
 }
 function drawSpace(ctx,w,h){
   const g=ctx.createRadialGradient(w/2,h/2,0,w/2,h/2,Math.max(w,h)/1.2);
@@ -1131,11 +1117,22 @@ function highlightPalette(){
   });
 }
 function renderSetup(){
-  const cv=$('#cv-setup');
-  const {ctx,cell}=fitCanvas(cv,N,N);
-  drawSpace(ctx,N*cell,N*cell);drawGrid(ctx,cell);
-  drawShips(boards[setupIdx],ctx,cell,true);
-  if(hoverCell&&selShip)drawHoverGhost();
+  const cv = $('#cv-setup');
+  // Используем максимум доступного места на экране
+  const shell = cv.closest('.board-shell');
+  let availW;
+  if (shell && shell.clientWidth) {
+    availW = shell.clientWidth - 24;
+  } else {
+    availW = window.innerWidth - 48;
+  }
+  const availH = window.innerHeight - 240;
+  const size = Math.max(200, Math.min(availW, availH, 640));
+  const {ctx, cell} = fitCanvas(cv, N, N, size);
+  drawSpace(ctx, N*cell, N*cell);
+  drawGrid(ctx, cell);
+  drawShips(boards[setupIdx], ctx, cell, true);
+  if(hoverCell && selShip) drawHoverGhost();
 }
 function drawHoverGhost(){
   if(!hoverCell||!selShip)return;
@@ -1194,23 +1191,14 @@ $('#btn-ready').onclick=()=>{
 };
 
 /* ============ BATTLE ============ */
+/* Реклама теперь показывается В КОНЦЕ боя, а не в начале */
 function startBattle(){
-  showElement('ov-adload');
-  const t0=Date.now(),minShow=700;
-  requestAnimationFrame(()=>{
-    interstitialAd(()=>{
-      const wait=Math.max(0,minShow-(Date.now()-t0));
-      setTimeout(()=>{
-        if(!hotseat){aiReset();randomFleet(boards[1]);spawnGold(boards[1],startingGoldCells());}
-        cur=0;myTurn=true;gameOver=false;pendingAbil=null;
-        extraShots=0;combo=0;comboMax=0;shipsLost=0;tutorial=false;
-        const abInit=gameMode==='super'?{sonar:2,double:2,torpedo:1}:{sonar:0,double:0,torpedo:0};
-        ABILS=[Object.assign({},abInit),Object.assign({},abInit)];
-        buildAbilities();show('scr-game');renderGame();
-        hideElement('ov-adload');
-      },wait);
-    });
-  });
+  if(!hotseat){aiReset();randomFleet(boards[1]);spawnGold(boards[1],startingGoldCells());}
+  cur=0;myTurn=true;gameOver=false;pendingAbil=null;
+  extraShots=0;combo=0;comboMax=0;shipsLost=0;tutorial=false;
+  const abInit=gameMode==='super'?{sonar:2,double:2,torpedo:1}:{sonar:0,double:0,torpedo:0};
+  ABILS=[Object.assign({},abInit),Object.assign({},abInit)];
+  buildAbilities();show('scr-game');renderGame();
 }
 function buildAbilities(){
   const bar=$('#ab-bar');bar.innerHTML='';
@@ -1253,15 +1241,35 @@ function updateComboChip(){
   if(combo>=2){ch.style.display='flex';$('#combo-val').textContent='x'+combo;}
   else ch.style.display='none';
 }
+/* Пересчёт размера игровых полей с учётом свободного места */
+function calcBoardSize(){
+  const wrap = $('#board-wrap');
+  const wrapW = Math.max(220, (wrap.clientWidth || Math.min(window.innerWidth - 24, 720)) - 4);
+  const wrapH = Math.max(220, (wrap.clientHeight || (window.innerHeight * 0.5)) - 16);
+  const gap = 10;
+  const labelH = 22;
+  const minBoard = 220;
+  let size;
+  if (wrapW >= minBoard * 2 + gap) {
+    // два поля рядом
+    size = Math.min((wrapW - gap) / 2, wrapH - labelH);
+  } else {
+    // поля друг под другом
+    size = Math.min(wrapW, (wrapH - gap) / 2 - labelH);
+  }
+  size = Math.max(minBoard, Math.min(size, 520));
+  return size;
+}
 function renderGame(){
-  drawFull($('#cv-my'),boards[cur],true);
-  drawFull($('#cv-enemy'),boards[1-cur],false);
+  const size = calcBoardSize();
+  drawFull($('#cv-my'), boards[cur], true, size);
+  drawFull($('#cv-enemy'), boards[1-cur], false, size);
   $('#ttl-my').textContent=t('yourFleet');
   $('#ttl-en').textContent=t('enemyFleet');
   updateTurnLabel();updateComboChip();updateAbilities();
 }
-function drawFull(cv,b,showAll){
-  const {ctx,cell}=fitCanvas(cv,N,N);
+function drawFull(cv,b,showAll,size){
+  const {ctx,cell}=fitCanvas(cv,N,N,size);
   const rect=cv.getBoundingClientRect();
   drawSpace(ctx,rect.width,rect.height);drawGrid(ctx,cell);
   drawShips(b,ctx,cell,showAll);drawMarks(b,ctx,cell);
@@ -1377,6 +1385,7 @@ function useAbility(idx){
   }
 }
 function checkEnd(){
+  if(tutorial) return false;
   const aAlive=boards[0].ships.some(s=>!isSunk(boards[0],s));
   const bAlive=boards[1].ships.some(s=>!isSunk(boards[1],s));
   if(aAlive&&bAlive)return false;
@@ -1393,7 +1402,10 @@ function checkEnd(){
   else{credits=winner===0?50+P.level*7:15;xp=winner===0?35+P.level*5:12;}
   credits+=comboMax*comboBonusPerHit();
   endReward={credits,xp:Math.round(xp),win:!hotseat?winner===0:true,who:winner};
-  showResult();vkSave();return true;
+  vkSave();
+  // Показываем рекламу в конце боя, затем экран результата
+  interstitialAd(()=>{ showResult(); });
+  return true;
 }
 function showResult(){
   $('#result-title').textContent=hotseat?('🏆 '+pname(endReward.who)):(endReward.win?'🏆 ПОБЕДА':'💀 ПОРАЖЕНИЕ');
@@ -1712,6 +1724,7 @@ playerFire = function(idx){
 
 function endTutorial(){
   tutorial=false;
+  gameOver=true;
   document.querySelectorAll('.tut-spot,.tut-box').forEach(el=>el.remove());
   toast('🎉 Обучение завершено!');
   setTimeout(()=>{show('scr-lobby');},900);
